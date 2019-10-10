@@ -186,7 +186,7 @@ def is_sorted(data):
     return True
 
 
-def bogosort(data):
+def shufflesort(data):
 
     while not is_sorted(data):
 
