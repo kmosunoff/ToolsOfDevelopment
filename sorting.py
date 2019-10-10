@@ -1,3 +1,6 @@
+import random
+
+
 class Sorter():
 
     """[Method that sorts a list using a bubble sort algorithm]
@@ -170,3 +173,23 @@ def quick_sort(nums):
             _quick_sort(items, split_index + 1, high)
 
     _quick_sort(nums, 0, len(nums) - 1)
+
+
+def is_sorted(data):
+
+    for i in range(len(data) - 1):
+
+        if data[i] > data[i + 1]:
+
+            return False
+
+    return True
+
+
+def bogosort(data):
+
+    while not is_sorted(data):
+
+        random.shuffle(data)
+
+    return data
